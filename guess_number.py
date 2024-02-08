@@ -13,5 +13,7 @@ while True:
     if guess == number:
         print("Congratulations! You guessed the right number.")
         break
+    if guess > number:
+        guess = input("You guessed too high. Try again. What number am I thinking of? ")
     else:
-        guess = input(f"Sorry! Try again. What number am I thinking of? ")
+        guess = input(f"You guessed too low. Try again. What number am I thinking of? ")
