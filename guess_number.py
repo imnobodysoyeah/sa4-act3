@@ -16,8 +16,12 @@ while num_guesses != 0:
         break
     else:
         num_guesses -= 1
-        if num_guesses == 0:
+        if guess > number:
+            guess = input(f"Sorry! You guessed too high. You have {num_guesses} guesses left. Try again. What number am I thinking of? ")
+        else:
+            guess = input(f"Sorry! You guessed too low. You have {num_guesses} guesses left. Try again. What number am I thinking of? ")
+        if num_guesses == 1:
             print(f"Sorry! You have no more guesses left. The number was {number}.")
             break
-        else:
-            guess = input(f"Sorry! You have {num_guesses} guesses left. Try again. What number am I thinking of? ")
+   
+        
